@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div id="container">
+
+      <p id="heading">To-Do List</p>
+
+      <div id="input_div">
+        <form id="myForm">
+        <input type="text" id="todo_name" placeholder="Item Name" required/>
+        <div id="date_input_div">
+            <img id="calendar_icon" src="./assets/calendar_icon.svg" alt="img">
+          <input
+            type="text"
+            id="date"
+            placeholder="Deadline"
+            onfocus="(this.type='date')"
+            onblur="(this.type='text')"
+            required
+          />
+        </div>
+        <select name="priority" id="priority_select" required>
+            <option value="">Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        <button id="submitBtn" type="submit">Add Item</button>
+    </form>
+      </div>
+      <div id="todays_todo_div">
+        <p class="todo_heading">Today's TodoList</p>
+      </div>
+      <div id="future_todos_div">
+        <p class="todo_heading">Future TodoList</p>
+      </div>
+      <div id="completed_todos_div">
+        <p class="todo_heading">Completed TodoList</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
