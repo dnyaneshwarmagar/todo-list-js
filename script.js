@@ -64,7 +64,7 @@ function renderTodos() {
                 todo_div.setAttribute("id", "todo_div")
                 todo_div.innerHTML = `
            <div>${todayTodoCount}. ${todo.name}</div>
-            <div>${todo.date.split("-").join("/")}</div>
+            <div>${todo.date.split("-").reverse().join("/")}</div>
             <div>Priority: ${todo.priority}</div>
             <div class="btns_div">
                 <img id="select_img" src="./assets/check-circle.png" alt="img" onclick="handleDone(${index})">
@@ -82,7 +82,7 @@ function renderTodos() {
                 }
                 todo_div.innerHTML = `
             <div>${futureTodoCount}. ${todo.name}</div>
-            <div>${todo.date.split("-").join("/")}</div>
+            <div>${todo.date.split("-").reverse().join("/")}</div>
             <div>Priority: ${todo.priority}</div>
             <div class="btns_div">
                 <img id="select_img" src="./assets/check-circle.png" alt="img" onclick="handleDone(${index})">
@@ -98,7 +98,7 @@ function renderTodos() {
             completed_todo_div.setAttribute("id", "completed_todo_div")
             completed_todo_div.innerHTML = `
         <div>${completeTodoCount}. ${todo.name}</div>
-            <div>${todo.date.split("-").join("/")}</div>
+            <div>${todo.date.split("-").reverse().join("/")}</div>
             <div>Priority: ${todo.priority}</div>
             <div>                
                 <img id="trash_img" src="./assets/delete_black_icon.png" alt="img" onclick="handleDelete(${index})">
